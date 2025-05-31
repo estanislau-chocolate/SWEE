@@ -94,7 +94,7 @@ body{
     border-radius: 50%;
 }
 
-.decorations::before, .decorations::after, .decorationsTwo::before, .decorationsTwo::after, .decorationsThree::before .decorationsThree::after{
+.decorations::before, .decorations::after, .decorationsTwo::before, .decorationsTwo::after, .decorationsThree::before, .decorationsThree::after{
     content: "";
     position: absolute;
     border-left: 20px solid transparent;
@@ -214,7 +214,7 @@ body{
     z-index: -1;
     left: 0;
     top: 0;
-    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0, 2);
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2);
 }
 
 .inside-text{
