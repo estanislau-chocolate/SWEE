@@ -237,4 +237,5 @@ p{
 .name {
     font-family: 'Dancing Script', cursive;
     font-size: 20px; /* ajuste conforme o visual desejado */
+    margin-left: 150px;
 }
