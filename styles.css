@@ -1,0 +1,240 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150vh;
+    background-color: rgb(39, 0, 110);
+}
+/*Criar o card conteiner*/
+.birthdaycard {
+    position: relative;
+    width: 250px;
+    height:350px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: 1s;
+  }
+  
+  .birthdaycard:hover {
+      transform: perspective(2500px) rotate(5deg);
+      box-shadow: inset 100px 20px 100px rgba(0,0,0,.15), 0 10px 100px rgba(0,0,0,0.3);
+  }
+
+.birthdaycard:hover .cardfront {
+    transform: rotateY(-160deg);
+}
+
+.birthdaycard:hover .front-text {
+    display: none;
+}
+
+/*Pode remover se quiser deixar o desenho*/
+.birthdaycard:hover .wrap-deco {
+    display: none;
+}
+/********/
+
+.birthdaycard:hover .wrap-decoTwo {
+    display: none;
+}
+
+/*Pode remover se quiser deixar o bolo*/
+.birthdaycard:hover .pilate{
+    display: none;
+}
+
+/**Estilo da parte de frente do cartão*/
+.cardfront{
+    position: relative;
+    background-color: rgb(165, 35, 216);
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    transform-origin: left;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 13), 30px 0 50px rgba(0,0,0,0.1);
+    transition: 2s;
+}
+
+.happy, .toyou {
+    position: relative;
+    font-family: didot;
+    text-align: center;
+    backface-visibility: hidden;
+    font-size: 30px;
+}
+
+.happy{
+    top: 198px;
+}
+
+.toyou{
+    top: 123px;
+}
+
+.bday{
+    position: relative;
+    font-family: arial;
+    font-size: 30px;
+    text-align: center;
+    top: 163px;
+}
+
+.wrap-deco{
+    position:absolute;
+    top: -230px;
+    left: -200px;
+}
+
+.decorations{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    border: 3px solid #e714a8;
+    border-radius: 50%;
+}
+
+.decorations::before, .decorations::after, .decorationsTwo::before, .decorationsTwo::after, .decorationsThree::before .decorationsThree::after{
+    content: "";
+    position: absolute;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    width: 0;
+    height: 0;    
+}
+
+.decorations::before {
+    border-top: 40px solid #147477;
+    top: 297px;
+    left: 210px;
+    transform: rotate(-5deg);
+}
+
+.decorations::after {
+    border-top: 40px solid #423f50;
+    top: 288px;
+    left: 260px;
+    transform: rotate(-17deg); 
+}
+
+.decorationsTwo::before {
+    border-top: 40px solid #153046;
+    top: 268px;
+    left: 315px;
+    transform: rotate(-30deg);
+}
+
+.decorationsTwo::after, .decorationsThree::after{
+    border-top: 40px solid #041f58;
+    top: 238px;
+    left: 355px;
+    transform: rotate(-40deg);
+
+}
+
+.wrap-decoTwo {
+    transform: scaleX(-1);
+    position: absolute;
+    top: -230px;
+    left: 315px;
+}
+
+.decorationsThree:before{
+    border-top: 40px solid #100452;
+    top: 268px;
+    left: 315px;
+    transform: rotate(-30deg);
+}
+
+.pilate{
+    position: absolute;
+    width: 130px;
+    height: 5px;
+    left: 60px;
+    top: 213px;
+}
+
+.Love{
+    height: 50px;
+    width: 50px;
+    background: #f20044;
+    top: -50px;
+    left: 35px; 
+    position: absolute;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px #f20044;
+    animation: Love 0.6s linear infinite;
+
+
+}
+
+@keyframes Love {
+    0%{
+        transform: rotate(-45deg) scale(1.07);
+    }
+    80%{
+        transform: rotate(-45deg) scale(1.0);
+    }
+    100%{
+        transform: rotate(-45deg) scale(0.8);
+    }
+}
+
+.Love::before
+{
+    content: "";
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background: #f20044;
+    top: -50%;
+    border-radius:50px;
+    box-shadow: -10px -10px 90px #f20044;
+}
+
+.Love::after {
+    content: "";
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background: #f20044;
+    right: -50%;
+    border-radius:50px;
+    box-shadow: -10px -10px 90px #f20044;
+}
+
+
+/**Estilo da parte de dentro do cartão*/
+
+.cardinside{
+    position: absolute;
+    background-color: rgb(209, 15, 145);
+    width: 250px;
+    height: 350px;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0, 2);
+}
+
+.inside-text{
+    position: relative;
+    top: -170px;
+    transform: scale(0.7);
+}
+
+.wishes{
+    position: relative;
+    top: -130px;
+    margin: 25px;
+}
+
+p{
+    font-family:'Times New Roman', Times, serif;
+    color: #000000;
+}
+
+.name{
+    font-family: 'Brush Script MT';
+    margin-left: 150px;
+}
